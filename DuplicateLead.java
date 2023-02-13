@@ -22,20 +22,16 @@ public class DuplicateLead {
 		driver.findElement(By.xpath("//button[text()='Find Leads']")).click();
 		String text=driver.findElement(By.xpath("//a[text()='Deepika']")).getText();
 		System.out.println(text);
-		//WebElement ele=driver.findElement(By.xpath("(//a[@class='linktext'])[6]"));
-		//ele.click();
 		driver.findElement(By.xpath("//a[text()='Deepika']")).click();
 		driver.findElement(By.linkText("Duplicate Lead")).click();
 		String text1=driver.getTitle();
 		if(text1.equals("Duplicate Lead"));
 		driver.findElement(By.xpath("//input[@class='smallSubmit']")).click();
 		String text2=driver.findElement(By.id("viewLead_firstName_sp")).getText();
-		//System.out.println(text2);
 		if(text.equals(text2)) {
 			System.out.println("Confirm");
 		}
-		//driver.close();
-		//System.out.println(text);
+		driver.close();
 
 	}
 
